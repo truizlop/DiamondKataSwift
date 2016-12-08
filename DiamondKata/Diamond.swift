@@ -13,7 +13,11 @@ func printDiamond(character : Character) {
 }
 
 func diamond(_ character : Character) -> [String] {
-    return Array(repeating: character * squareSide(character), count: squareSide(character))
+    let topHalf = (0 ... character.ordinal()).map{ ordinal in
+        Character(fromOrdinal: ordinal) * squareSide(character)
+    }
+    let bottomHalf = Array(topHalf[0 ..< topHalf.count - 1])
+    return topHalf + bottomHalf
 }
 
 func squareSide(_ character : Character) -> Int {

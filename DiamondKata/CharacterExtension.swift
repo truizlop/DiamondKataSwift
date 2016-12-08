@@ -9,6 +9,10 @@
 import Foundation
 
 extension Character {
+    init(fromOrdinal n: Int) {
+        self.init(UnicodeScalar(UnicodeScalar("A")!.value + UInt32(n))!)
+    }
+    
     func unicodeScalarCodePoint() -> UInt32 {
         let characterString = String(self)
         let scalars = characterString.unicodeScalars

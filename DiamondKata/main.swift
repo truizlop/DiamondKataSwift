@@ -8,5 +8,5 @@
 
 import Foundation
 
-printDiamond(character: "A")
+printDiamond(character: "E")
 
