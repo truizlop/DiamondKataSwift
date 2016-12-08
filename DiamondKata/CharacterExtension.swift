@@ -19,3 +19,7 @@ extension Character {
         return Int(self.unicodeScalarCodePoint() - Character("A").unicodeScalarCodePoint())
     }
 }
+
+func *(lhs : Character, rhs : Int) -> String {
+    return (0 ..< rhs).map{ _ in String(lhs) }.reduce(""){ "\($0)\($1)" }
+}
