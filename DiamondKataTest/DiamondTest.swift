@@ -16,7 +16,7 @@ class DiamondTest: XCTestCase {
     
     func testNumberOfLines() {
         property("Given a character, its diamond has 2 * ordinal(character) + 1 lines") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
-            return diamond(character).count == 2 * character.ordinal() + 1
+            return diamond(character).count == 2 * character.ordinal()! + 1
         }
     }
     
@@ -33,10 +33,10 @@ class DiamondTest: XCTestCase {
             let result = diamond(character)
             let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
             return topHalf.enumerated().map{ (index, line) in
-                let lettersInLine = Set(line.characters.map{ $0.ordinal() })
+                let lettersInLine = Set(line.characters.flatMap{ $0.ordinal() })
                 let expectedLetters = Set([index])
                 return lettersInLine == expectedLetters
-                }.reduce(true){ $0 && $1 }
+            }.reduce(true){ $0 && $1 }
         }
     }
     
@@ -58,7 +58,7 @@ class DiamondTest: XCTestCase {
             let result = diamond(character)
             return result.map{ (line : String) in
                 (Array(line.characters)[0 ..< line.characters.count/2 + 1]).flatMap{ $0 == Character(" ") ? nil : $0 }.count == 1
-                }.reduce(true){ $0 && $1 }
+            }.reduce(true){ $0 && $1 }
         }
     }
 }

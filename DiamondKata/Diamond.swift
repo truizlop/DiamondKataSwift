@@ -13,13 +13,19 @@ func printDiamond(character : Character) {
 }
 
 func diamond(_ character : Character) -> [String] {
-    let topHalf = (0 ... character.ordinal()).map{ ordinal in
-        Character(fromOrdinal: ordinal) * squareSide(character)
+    let topHalf = (0 ... character.ordinal()!).map{ ordinal in
+        makeLineForCharacter(withOrdinal: ordinal, withLength: squareSide(character))
     }
     let bottomHalf = Array(topHalf[0 ..< topHalf.count - 1]).reversed()
     return topHalf + bottomHalf
 }
 
 func squareSide(_ character : Character) -> Int {
-    return 2 * character.ordinal() + 1
+    return 2 * character.ordinal()! + 1
+}
+
+func makeLineForCharacter(withOrdinal ordinal : Int, withLength length : Int) -> String {
+    let leftHalf = String(Character(fromOrdinal: ordinal)) + (Character(" ") * (length / 2))
+    let rightHalf = (leftHalf.characters.count - 1 > 0) ? String(Array(leftHalf.characters)[0 ..< (leftHalf.characters.count - 1)]) : ""
+    return leftHalf + String(rightHalf.characters.reversed())
 }

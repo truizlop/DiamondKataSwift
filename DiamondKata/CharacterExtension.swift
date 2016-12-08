@@ -19,8 +19,8 @@ extension Character {
         return scalars[scalars.startIndex].value
     }
     
-    func ordinal() -> Int {
-        return Int(self.unicodeScalarCodePoint() - Character("A").unicodeScalarCodePoint())
+    func ordinal() -> Int? {
+        return (Character("A") ... Character("Z")).contains(self) ? Int(self.unicodeScalarCodePoint() - Character("A").unicodeScalarCodePoint()) : nil
     }
 }
 
