@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DiamondKataTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>111948AE1DF9940D00D5D186</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>111948BC1DF9942700D5D186</key>
 		<dict>
 			<key>primary</key>
 			<true/>

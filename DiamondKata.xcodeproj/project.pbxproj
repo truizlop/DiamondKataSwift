@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		111948B31DF9940D00D5D186 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948B21DF9940D00D5D186 /* main.swift */; };
+		8ED199A9D85AD22B69A7F767 /* Pods_DiamondKataTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D3B7D2518C21D5935585B /* Pods_DiamondKataTest.framework */; };
+		BB7055954EB9711ECF1320F0 /* Pods_DiamondKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714DE83D6CB85D1EE3DE2C6D /* Pods_DiamondKata.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E4D3B7D2518C21D5935585B /* Pods_DiamondKataTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiamondKataTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		111948AF1DF9940D00D5D186 /* DiamondKata */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DiamondKata; sourceTree = BUILT_PRODUCTS_DIR; };
 		111948B21DF9940D00D5D186 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		111948BD1DF9942700D5D186 /* DiamondKataTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiamondKataTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		111948C11DF9942700D5D186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27BD27A301E7AE50D2075168 /* Pods-DiamondKataTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKataTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest.debug.xcconfig"; sourceTree = "<group>"; };
+		2CD9213E29F09BCF5C1C16DF /* Pods-DiamondKataTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKataTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest.release.xcconfig"; sourceTree = "<group>"; };
+		714DE83D6CB85D1EE3DE2C6D /* Pods_DiamondKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiamondKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E067842DB214B5822E6F1D41 /* Pods-DiamondKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKata.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKata/Pods-DiamondKata.release.xcconfig"; sourceTree = "<group>"; };
+		F6E03E625FDA6C2155CDC605 /* Pods-DiamondKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKata/Pods-DiamondKata.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7055954EB9711ECF1320F0 /* Pods_DiamondKata.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		111948BA1DF9942700D5D186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED199A9D85AD22B69A7F767 /* Pods_DiamondKataTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				111948B11DF9940D00D5D186 /* DiamondKata */,
+				111948BE1DF9942700D5D186 /* DiamondKataTest */,
 				111948B01DF9940D00D5D186 /* Products */,
+				64829C4FD9FF94D67EAAEC45 /* Pods */,
+				D4E2A98166ADA091A4FF564C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				111948AF1DF9940D00D5D186 /* DiamondKata */,
+				111948BD1DF9942700D5D186 /* DiamondKataTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +85,34 @@
 			path = DiamondKata;
 			sourceTree = "<group>";
 		};
+		111948BE1DF9942700D5D186 /* DiamondKataTest */ = {
+			isa = PBXGroup;
+			children = (
+				111948C11DF9942700D5D186 /* Info.plist */,
+			);
+			path = DiamondKataTest;
+			sourceTree = "<group>";
+		};
+		64829C4FD9FF94D67EAAEC45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E03E625FDA6C2155CDC605 /* Pods-DiamondKata.debug.xcconfig */,
+				E067842DB214B5822E6F1D41 /* Pods-DiamondKata.release.xcconfig */,
+				27BD27A301E7AE50D2075168 /* Pods-DiamondKataTest.debug.xcconfig */,
+				2CD9213E29F09BCF5C1C16DF /* Pods-DiamondKataTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4E2A98166ADA091A4FF564C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				714DE83D6CB85D1EE3DE2C6D /* Pods_DiamondKata.framework */,
+				0E4D3B7D2518C21D5935585B /* Pods_DiamondKataTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -69,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 111948B61DF9940D00D5D186 /* Build configuration list for PBXNativeTarget "DiamondKata" */;
 			buildPhases = (
+				798F78C25D5F2F6B293A52A9 /* [CP] Check Pods Manifest.lock */,
 				111948AB1DF9940D00D5D186 /* Sources */,
 				111948AC1DF9940D00D5D186 /* Frameworks */,
 				111948AD1DF9940D00D5D186 /* CopyFiles */,
+				77D2CDAFCA57F0057BF6E322 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -81,6 +134,26 @@
 			productName = DiamondKata;
 			productReference = 111948AF1DF9940D00D5D186 /* DiamondKata */;
 			productType = "com.apple.product-type.tool";
+		};
+		111948BC1DF9942700D5D186 /* DiamondKataTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 111948C21DF9942700D5D186 /* Build configuration list for PBXNativeTarget "DiamondKataTest" */;
+			buildPhases = (
+				BABF3801AEF1E29C22CDCECB /* [CP] Check Pods Manifest.lock */,
+				111948B91DF9942700D5D186 /* Sources */,
+				111948BA1DF9942700D5D186 /* Frameworks */,
+				111948BB1DF9942700D5D186 /* Resources */,
+				046E4881BE69576682CF902F /* [CP] Embed Pods Frameworks */,
+				B9E7E016A8F4CA840BC1D75C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiamondKataTest;
+			productName = DiamondKataTest;
+			productReference = 111948BD1DF9942700D5D186 /* DiamondKataTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,6 +166,11 @@
 				ORGANIZATIONNAME = "Tomás Ruiz-López";
 				TargetAttributes = {
 					111948AE1DF9940D00D5D186 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 248ENVAN9C;
+						ProvisioningStyle = Automatic;
+					};
+					111948BC1DF9942700D5D186 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 248ENVAN9C;
 						ProvisioningStyle = Automatic;
@@ -112,9 +190,98 @@
 			projectRoot = "";
 			targets = (
 				111948AE1DF9940D00D5D186 /* DiamondKata */,
+				111948BC1DF9942700D5D186 /* DiamondKataTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		111948BB1DF9942700D5D186 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046E4881BE69576682CF902F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D2CDAFCA57F0057BF6E322 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiamondKata/Pods-DiamondKata-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		798F78C25D5F2F6B293A52A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9E7E016A8F4CA840BC1D75C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BABF3801AEF1E29C22CDCECB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		111948AB1DF9940D00D5D186 /* Sources */ = {
@@ -122,6 +289,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				111948B31DF9940D00D5D186 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		111948B91DF9942700D5D186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +392,7 @@
 		};
 		111948B71DF9940D00D5D186 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E03E625FDA6C2155CDC605 /* Pods-DiamondKata.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 248ENVAN9C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -227,9 +402,40 @@
 		};
 		111948B81DF9940D00D5D186 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E067842DB214B5822E6F1D41 /* Pods-DiamondKata.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 248ENVAN9C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		111948C31DF9942700D5D186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27BD27A301E7AE50D2075168 /* Pods-DiamondKataTest.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 248ENVAN9C;
+				INFOPLIST_FILE = DiamondKataTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.DiamondKataTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		111948C41DF9942700D5D186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD9213E29F09BCF5C1C16DF /* Pods-DiamondKataTest.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 248ENVAN9C;
+				INFOPLIST_FILE = DiamondKataTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.DiamondKataTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -253,6 +459,16 @@
 				111948B81DF9940D00D5D186 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		111948C21DF9942700D5D186 /* Build configuration list for PBXNativeTarget "DiamondKataTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				111948C31DF9942700D5D186 /* Debug */,
+				111948C41DF9942700D5D186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
