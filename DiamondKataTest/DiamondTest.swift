@@ -52,4 +52,13 @@ class DiamondTest: XCTestCase {
             return result == horizontalSymmetry
         }
     }
+    
+    func testEachLineHasOnlyOneLetterInFirstHalf() {
+        property("Each line of the diamond must only have a letter in first half") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
+            let result = diamond(character)
+            return result.map{ (line : String) in
+                (Array(line.characters)[0 ..< line.characters.count/2 + 1]).flatMap{ $0 == Character(" ") ? nil : $0 }.count == 1
+                }.reduce(true){ $0 && $1 }
+        }
+    }
 }
