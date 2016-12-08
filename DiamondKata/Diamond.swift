@@ -13,5 +13,5 @@ func printDiamond(character : Character) {
 }
 
 func diamond(_ character : Character) -> [String] {
-    return [String(character)]
+    return Array(repeating: String(character), count: 2 * character.ordinal() + 1)
 }
