@@ -16,7 +16,7 @@ func diamond(_ character : Character) -> [String] {
     let topHalf = (0 ... character.ordinal()).map{ ordinal in
         Character(fromOrdinal: ordinal) * squareSide(character)
     }
-    let bottomHalf = Array(topHalf[0 ..< topHalf.count - 1])
+    let bottomHalf = Array(topHalf[0 ..< topHalf.count - 1]).reversed()
     return topHalf + bottomHalf
 }
 
