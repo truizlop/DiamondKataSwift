@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		111948B31DF9940D00D5D186 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948B21DF9940D00D5D186 /* main.swift */; };
+		111948C61DF9966500D5D186 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C51DF9966500D5D186 /* Diamond.swift */; };
+		111948C91DF9968100D5D186 /* DiamondTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C81DF9968100D5D186 /* DiamondTest.swift */; };
+		111948CA1DF9997500D5D186 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C51DF9966500D5D186 /* Diamond.swift */; };
 		8ED199A9D85AD22B69A7F767 /* Pods_DiamondKataTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D3B7D2518C21D5935585B /* Pods_DiamondKataTest.framework */; };
 		BB7055954EB9711ECF1320F0 /* Pods_DiamondKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714DE83D6CB85D1EE3DE2C6D /* Pods_DiamondKata.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +33,9 @@
 		111948B21DF9940D00D5D186 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		111948BD1DF9942700D5D186 /* DiamondKataTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiamondKataTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		111948C11DF9942700D5D186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		111948C51DF9966500D5D186 /* Diamond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
+		111948C71DF9968100D5D186 /* DiamondKataTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiamondKataTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		111948C81DF9968100D5D186 /* DiamondTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondTest.swift; sourceTree = "<group>"; };
 		27BD27A301E7AE50D2075168 /* Pods-DiamondKataTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKataTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest.debug.xcconfig"; sourceTree = "<group>"; };
 		2CD9213E29F09BCF5C1C16DF /* Pods-DiamondKataTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKataTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest.release.xcconfig"; sourceTree = "<group>"; };
 		714DE83D6CB85D1EE3DE2C6D /* Pods_DiamondKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiamondKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				111948B21DF9940D00D5D186 /* main.swift */,
+				111948C51DF9966500D5D186 /* Diamond.swift */,
 			);
 			path = DiamondKata;
 			sourceTree = "<group>";
@@ -89,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				111948C11DF9942700D5D186 /* Info.plist */,
+				111948C81DF9968100D5D186 /* DiamondTest.swift */,
+				111948C71DF9968100D5D186 /* DiamondKataTest-Bridging-Header.h */,
 			);
 			path = DiamondKataTest;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 					111948BC1DF9942700D5D186 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 248ENVAN9C;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -288,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111948C61DF9966500D5D186 /* Diamond.swift in Sources */,
 				111948B31DF9940D00D5D186 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111948CA1DF9997500D5D186 /* Diamond.swift in Sources */,
+				111948C91DF9968100D5D186 /* DiamondTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 27BD27A301E7AE50D2075168 /* Pods-DiamondKataTest.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 248ENVAN9C;
 				INFOPLIST_FILE = DiamondKataTest/Info.plist;
@@ -421,6 +435,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.DiamondKataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "DiamondKataTest/DiamondKataTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -429,12 +445,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CD9213E29F09BCF5C1C16DF /* Pods-DiamondKataTest.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 248ENVAN9C;
 				INFOPLIST_FILE = DiamondKataTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.truizlop.DiamondKataTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DiamondKataTest/DiamondKataTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
