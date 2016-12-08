@@ -14,10 +14,14 @@ class DiamondTest: XCTestCase {
 
     let uppercaseCharacterGen = Gen<Character>.fromElementsIn(Character("A")...Character("Z"))
     
-    func testProducesSomeLines() {
-        property("Given a character, it produces some lines") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
-            return !diamond(character).isEmpty
+    func testProducesAnOddNumberOfLines() {
+        property("Given a character, its diamond has an odd number of lines") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
+            return self.isOdd(diamond(character).count)
         }
+    }
+    
+    func isOdd(_ n : Int) -> Bool {
+        return n % 2 == 1
     }
 
 }
