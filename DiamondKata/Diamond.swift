@@ -25,7 +25,9 @@ func squareSide(_ character : Character) -> Int {
 }
 
 func makeLineForCharacter(withOrdinal ordinal : Int, withLength length : Int) -> String {
-    let leftHalf = String(Character(fromOrdinal: ordinal)) + (Character(" ") * (length / 2))
+    let firstSpaces = Character(" ") * (length / 2 - ordinal)
+    let secondSpaces = Character(" ") * ordinal
+    let leftHalf = firstSpaces + String(Character(fromOrdinal: ordinal)) + secondSpaces
     let rightHalf = (leftHalf.characters.count - 1 > 0) ? String(Array(leftHalf.characters)[0 ..< (leftHalf.characters.count - 1)]) : ""
     return leftHalf + String(rightHalf.characters.reversed())
 }
