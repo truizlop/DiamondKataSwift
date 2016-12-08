@@ -11,6 +11,8 @@
 		111948C61DF9966500D5D186 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C51DF9966500D5D186 /* Diamond.swift */; };
 		111948C91DF9968100D5D186 /* DiamondTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C81DF9968100D5D186 /* DiamondTest.swift */; };
 		111948CA1DF9997500D5D186 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C51DF9966500D5D186 /* Diamond.swift */; };
+		11DC9D5A1DF9A7E10058C40A /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC9D591DF9A7E10058C40A /* CharacterExtension.swift */; };
+		11DC9D5B1DF9A7F10058C40A /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC9D591DF9A7E10058C40A /* CharacterExtension.swift */; };
 		8ED199A9D85AD22B69A7F767 /* Pods_DiamondKataTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4D3B7D2518C21D5935585B /* Pods_DiamondKataTest.framework */; };
 		BB7055954EB9711ECF1320F0 /* Pods_DiamondKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714DE83D6CB85D1EE3DE2C6D /* Pods_DiamondKata.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,7 @@
 		111948C51DF9966500D5D186 /* Diamond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		111948C71DF9968100D5D186 /* DiamondKataTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiamondKataTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		111948C81DF9968100D5D186 /* DiamondTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondTest.swift; sourceTree = "<group>"; };
+		11DC9D591DF9A7E10058C40A /* CharacterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterExtension.swift; sourceTree = "<group>"; };
 		27BD27A301E7AE50D2075168 /* Pods-DiamondKataTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKataTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest.debug.xcconfig"; sourceTree = "<group>"; };
 		2CD9213E29F09BCF5C1C16DF /* Pods-DiamondKataTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiamondKataTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiamondKataTest/Pods-DiamondKataTest.release.xcconfig"; sourceTree = "<group>"; };
 		714DE83D6CB85D1EE3DE2C6D /* Pods_DiamondKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiamondKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +91,7 @@
 			children = (
 				111948B21DF9940D00D5D186 /* main.swift */,
 				111948C51DF9966500D5D186 /* Diamond.swift */,
+				11DC9D591DF9A7E10058C40A /* CharacterExtension.swift */,
 			);
 			path = DiamondKata;
 			sourceTree = "<group>";
@@ -298,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DC9D5A1DF9A7E10058C40A /* CharacterExtension.swift in Sources */,
 				111948C61DF9966500D5D186 /* Diamond.swift in Sources */,
 				111948B31DF9940D00D5D186 /* main.swift in Sources */,
 			);
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DC9D5B1DF9A7F10058C40A /* CharacterExtension.swift in Sources */,
 				111948CA1DF9997500D5D186 /* Diamond.swift in Sources */,
 				111948C91DF9968100D5D186 /* DiamondTest.swift in Sources */,
 			);
