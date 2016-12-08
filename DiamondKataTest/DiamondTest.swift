@@ -61,4 +61,14 @@ class DiamondTest: XCTestCase {
             }.reduce(true){ $0 && $1 }
         }
     }
+    
+    func testLetterIsPlacedCorrectlyInEachLine() {
+        property("A letter in first half of line i must be placed in line.length / 2 - i") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
+            let result = diamond(character)
+            let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
+            return topHalf.enumerated().map{ (index, line) in
+                Array(line.characters)[line.characters.count / 2 - index].ordinal() == index
+            }.reduce(true){ $0 == $1 }
+        }
+    }
 }
