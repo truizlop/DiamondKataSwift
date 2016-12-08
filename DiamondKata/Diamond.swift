@@ -9,5 +9,5 @@
 import Foundation
 
 func diamond(_ character : Character) -> [String] {
-    return []
+    return [String(character)]
 }
