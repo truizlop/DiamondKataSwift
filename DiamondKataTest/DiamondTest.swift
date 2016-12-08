@@ -39,4 +39,11 @@ class DiamondTest: XCTestCase {
                 }.reduce(true){ $0 && $1 }
         }
     }
+    
+    func testSimmetry() {
+        property("A diamond must be vertically simmetric") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
+            let result = diamond(character)
+            return result == result.reversed()
+        }
+    }
 }
