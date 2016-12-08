@@ -20,4 +20,11 @@ class DiamondTest: XCTestCase {
         }
     }
     
+    func testSquareness() {
+        property("Each line of the diamond must have as many characters as lines the diamond has") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
+            let result = diamond(character)
+            let lines = result.count
+            return result.map{ $0.characters.count == lines }.reduce(true){ $0 && $1}
+        }
+    }
 }
