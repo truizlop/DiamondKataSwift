@@ -13,5 +13,9 @@ func printDiamond(character : Character) {
 }
 
 func diamond(_ character : Character) -> [String] {
-    return Array(repeating: character * (2 * character.ordinal() + 1), count: 2 * character.ordinal() + 1)
+    return Array(repeating: character * squareSide(character), count: squareSide(character))
+}
+
+func squareSide(_ character : Character) -> Int {
+    return 2 * character.ordinal() + 1
 }
