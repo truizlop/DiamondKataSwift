@@ -57,7 +57,7 @@ class DiamondTest: XCTestCase {
         property("Each line of the diamond must only have a letter in first half") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
             return self.allTrue(result.map{ (line : String) in
-                (Array(line.characters)[0 ..< line.length/2 + 1]).flatMap{ $0 == Character(" ") ? nil : $0 }.count == 1
+                line.firstHalf().characters.flatMap{ $0 == Character(" ") ? nil : $0 }.count == 1
             })
         }
     }

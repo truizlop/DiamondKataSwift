@@ -20,4 +20,9 @@ extension String {
     func character(at position: Int) -> Character {
         return Array(self.characters)[position]
     }
+    
+    func firstHalf() -> String {
+        let index = self.index(self.startIndex, offsetBy: length / 2 + 1)
+        return self.substring(to: index)
+    }
 }
