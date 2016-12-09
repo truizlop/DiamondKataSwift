@@ -12,4 +12,8 @@ extension String {
     func reversed() -> String {
         return String(self.characters.reversed())
     }
+    
+    func character(at position: Int) -> Character {
+        return Array(self.characters)[position]
+    }
 }

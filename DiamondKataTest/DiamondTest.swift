@@ -67,7 +67,7 @@ class DiamondTest: XCTestCase {
             let result = diamond(character)
             let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
             return self.allTrue(topHalf.enumerated().map{ (index, line) in
-                Array(line.characters)[line.characters.count / 2 - index].ordinal() == index
+                line.character(at: line.characters.count / 2 - index).ordinal() == index
             })
         }
     }
