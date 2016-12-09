@@ -24,7 +24,7 @@ class DiamondTest: XCTestCase {
         property("Each line of the diamond must have as many characters as lines the diamond has") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
             let lines = result.count
-            return result.map{ $0.characters.count == lines }.reduce(true){ $0 && $1}
+            return self.allTrue(result.map{ $0.characters.count == lines })
         }
     }
     
@@ -32,11 +32,11 @@ class DiamondTest: XCTestCase {
         property("Each line should have a single letter in increasing order") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
             let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
-            return topHalf.enumerated().map{ (index, line) in
+            return self.allTrue(topHalf.enumerated().map{ (index, line) in
                 let lettersInLine = Set(line.characters.flatMap{ $0.ordinal() })
                 let expectedLetters = Set([index])
                 return lettersInLine == expectedLetters
-            }.reduce(true){ $0 && $1 }
+            })
         }
     }
     
@@ -56,9 +56,9 @@ class DiamondTest: XCTestCase {
     func testEachLineHasOnlyOneLetterInFirstHalf() {
         property("Each line of the diamond must only have a letter in first half") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
-            return result.map{ (line : String) in
+            return self.allTrue(result.map{ (line : String) in
                 (Array(line.characters)[0 ..< line.characters.count/2 + 1]).flatMap{ $0 == Character(" ") ? nil : $0 }.count == 1
-            }.reduce(true){ $0 && $1 }
+            })
         }
     }
     
@@ -66,9 +66,13 @@ class DiamondTest: XCTestCase {
         property("A letter in first half of line i must be placed in line.length / 2 - i") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
             let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
-            return topHalf.enumerated().map{ (index, line) in
+            return self.allTrue(topHalf.enumerated().map{ (index, line) in
                 Array(line.characters)[line.characters.count / 2 - index].ordinal() == index
-            }.reduce(true){ $0 == $1 }
+            })
         }
+    }
+    
+    func allTrue(_ array : [Bool]) -> Bool {
+        return array.reduce(true){ $0 && $1 }
     }
 }
