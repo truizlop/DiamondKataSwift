@@ -48,7 +48,7 @@ class DiamondTest: XCTestCase {
         
         property("A diamond must be horizontally symmetrical") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
-            let horizontalSymmetry = result.map{ String($0.characters.reversed()) }
+            let horizontalSymmetry = result.map{ $0.reversed() }
             return result == horizontalSymmetry
         }
     }

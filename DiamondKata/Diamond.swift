@@ -29,5 +29,5 @@ func makeLineForCharacter(withOrdinal ordinal : Int, withLength length : Int) ->
     let secondSpaces = Character(" ") * ordinal
     let leftHalf = firstSpaces + String(Character(fromOrdinal: ordinal)) + secondSpaces
     let rightHalf = (leftHalf.characters.count - 1 > 0) ? String(Array(leftHalf.characters)[0 ..< (leftHalf.characters.count - 1)]) : ""
-    return leftHalf + String(rightHalf.characters.reversed())
+    return leftHalf + rightHalf.reversed()
 }

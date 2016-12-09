@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110D5C371DFAA96300C68EA4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D5C361DFAA96300C68EA4 /* StringExtension.swift */; };
+		110D5C381DFAA9C500C68EA4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D5C361DFAA96300C68EA4 /* StringExtension.swift */; };
 		111948B31DF9940D00D5D186 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948B21DF9940D00D5D186 /* main.swift */; };
 		111948C61DF9966500D5D186 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C51DF9966500D5D186 /* Diamond.swift */; };
 		111948C91DF9968100D5D186 /* DiamondTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111948C81DF9968100D5D186 /* DiamondTest.swift */; };
@@ -31,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		0E4D3B7D2518C21D5935585B /* Pods_DiamondKataTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiamondKataTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		110D5C361DFAA96300C68EA4 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		111948AF1DF9940D00D5D186 /* DiamondKata */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DiamondKata; sourceTree = BUILT_PRODUCTS_DIR; };
 		111948B21DF9940D00D5D186 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		111948BD1DF9942700D5D186 /* DiamondKataTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiamondKataTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +95,7 @@
 				111948B21DF9940D00D5D186 /* main.swift */,
 				111948C51DF9966500D5D186 /* Diamond.swift */,
 				11DC9D591DF9A7E10058C40A /* CharacterExtension.swift */,
+				110D5C361DFAA96300C68EA4 /* StringExtension.swift */,
 			);
 			path = DiamondKata;
 			sourceTree = "<group>";
@@ -302,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110D5C371DFAA96300C68EA4 /* StringExtension.swift in Sources */,
 				11DC9D5A1DF9A7E10058C40A /* CharacterExtension.swift in Sources */,
 				111948C61DF9966500D5D186 /* Diamond.swift in Sources */,
 				111948B31DF9940D00D5D186 /* main.swift in Sources */,
@@ -312,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110D5C381DFAA9C500C68EA4 /* StringExtension.swift in Sources */,
 				11DC9D5B1DF9A7F10058C40A /* CharacterExtension.swift in Sources */,
 				111948CA1DF9997500D5D186 /* Diamond.swift in Sources */,
 				111948C91DF9968100D5D186 /* DiamondTest.swift in Sources */,
