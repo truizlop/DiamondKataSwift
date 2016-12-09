@@ -24,7 +24,7 @@ class DiamondTest: XCTestCase {
         property("Each line of the diamond must have as many characters as lines the diamond has") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
             let lines = result.count
-            return self.allTrue(result.map{ $0.characters.count == lines })
+            return self.allTrue(result.map{ $0.length == lines })
         }
     }
     
@@ -57,7 +57,7 @@ class DiamondTest: XCTestCase {
         property("Each line of the diamond must only have a letter in first half") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
             return self.allTrue(result.map{ (line : String) in
-                (Array(line.characters)[0 ..< line.characters.count/2 + 1]).flatMap{ $0 == Character(" ") ? nil : $0 }.count == 1
+                (Array(line.characters)[0 ..< line.length/2 + 1]).flatMap{ $0 == Character(" ") ? nil : $0 }.count == 1
             })
         }
     }
@@ -67,7 +67,7 @@ class DiamondTest: XCTestCase {
             let result = diamond(character)
             let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
             return self.allTrue(topHalf.enumerated().map{ (index, line) in
-                line.character(at: line.characters.count / 2 - index).ordinal() == index
+                line.character(at: line.length / 2 - index).ordinal() == index
             })
         }
     }

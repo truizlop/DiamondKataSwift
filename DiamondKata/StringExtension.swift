@@ -9,6 +9,10 @@
 import Foundation
 
 extension String {
+    var length : Int {
+        return self.characters.count
+    }
+    
     func reversed() -> String {
         return String(self.characters.reversed())
     }
