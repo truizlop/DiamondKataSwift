@@ -25,4 +25,8 @@ extension String {
         let index = self.index(self.startIndex, offsetBy: length / 2 + 1)
         return self.substring(to: index)
     }
+    
+    func removeBlanks() -> String {
+        return String(self.characters.flatMap{ $0 == Character(" ") ? nil : $0 })
+    }
 }
