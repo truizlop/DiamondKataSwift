@@ -31,7 +31,7 @@ class DiamondTest: XCTestCase {
     func testSingleLetterPerLine() {
         property("Each line should have a single letter in increasing order") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
-            let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
+            let topHalf = result.prefix(upTo: result.count / 2 + 1)
             return self.allTrue(topHalf.enumerated().map{ (index, line) in
                 let lettersInLine = Set(line.characters.flatMap{ $0.ordinal() })
                 let expectedLetters = Set([index])
@@ -65,7 +65,7 @@ class DiamondTest: XCTestCase {
     func testLetterIsPlacedCorrectlyInEachLine() {
         property("A letter in first half of line i must be placed in line.length / 2 - i") <- forAll(self.uppercaseCharacterGen) { (character : Character) in
             let result = diamond(character)
-            let topHalf = Array(result[0 ..< (result.count / 2 + 1)])
+            let topHalf = result.prefix(upTo: result.count / 2 + 1)
             return self.allTrue(topHalf.enumerated().map{ (index, line) in
                 line.character(at: line.length / 2 - index).ordinal() == index
             })
